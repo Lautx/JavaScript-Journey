@@ -1,9 +1,7 @@
 function repeatStringNumTimes(str, num) {
     let multistr = ""
-    while (num > 0){
+    for(let i = 0; i < num ; i++)
       multistr += str
-      num --;
-    }
     return multistr
     }
     repeatStringNumTimes("abc", 3);
