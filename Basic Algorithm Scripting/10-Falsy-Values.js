@@ -39,3 +39,19 @@ function bouncer(arr) {
   console.log(bouncer([7, "ate", "", false, 9]))
   console.log(bouncer([false, null, 0, NaN, undefined, ""]))
   console.log(bouncer([null, NaN, 1, 2, undefined]))
+
+  //simpler way
+
+  function bouncer(arr) {
+    return arr.filter(Boolean);
+  }
+
+  //or this way
+
+  function bouncer(arr) {
+    let newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i]) newArray.push(arr[i]);
+    }
+    return newArray;
+  }
