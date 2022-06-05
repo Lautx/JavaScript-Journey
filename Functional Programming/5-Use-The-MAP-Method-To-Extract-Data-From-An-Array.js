@@ -21,7 +21,7 @@ const users = [
 
 const names = users.map(user => user.name);
 console.log(names);
-//The console would display the value [ 'John', 'Amy', 'camperCat' ].
+// The console would display the value [ 'John', 'Amy', 'camperCat' ].
 
 // The watchList array holds objects with information on several movies. Use map on watchList to assign a new array of objects to the ratings variable. Each movie in the new array should have only a title key with the name of the film, and a rating key with the IMDB rating. The code in the editor currently uses a for loop to do this, so you should replace the loop functionality with your map expression.
 
@@ -139,17 +139,20 @@ const watchList = [
   }
 ];
 
-//from this looop
+// from this loop
 
+const rating = [];
 for (let i = 0; i < watchList.length; i++) {
-  ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
+  rating.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
 }
-console.log(JSON.stringify(ratings));
 
-//into this
+// Into this map function
+
 const ratings = watchList.map(movie =>{
-  const movieList = {}
-  movieList.title = movie["Title"]
+  let movieList = {}
+  movieList.title = movie.Title
   movieList.rating = movie["imdbRating"]
   return movieList
 })
+
+console.log(JSON.stringify(ratings));
