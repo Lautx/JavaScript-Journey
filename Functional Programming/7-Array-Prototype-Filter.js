@@ -135,9 +135,7 @@ const watchList = [
   
   // Only change code below this line
   
-  const filteredList = watchList.filter(movie => Number(movie.imdbRating) > 8).map(movie => ({
-    title:movie.Title,
-    rating:movie.imdbRating
-  }))
+  const filteredList = watchList.filter(movie => (movie.imdbRating) > 8).map(movie => ({title:movie.Title,rating:movie.imdbRating}))
+  
   // Only change code above this line
   console.log(filteredList);
